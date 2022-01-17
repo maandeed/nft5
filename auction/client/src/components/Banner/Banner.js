@@ -24,14 +24,14 @@ import {
             <BannerContainer style={bgStyle}>
                 <BannerWrapper>
                     <BannerHeading>
-                      COLLECTABLE ITEMS AWAITING
+                      Beautiful Paintings by the needy
                     </BannerHeading>
                     <BannerPara>
-                      What are you waiting for?
+                      Let's Play the game to support them!
                     </BannerPara>
                     <Link to='/auctions'>
                     <Button fontBig big>
-                      Explore Auction HERE
+                      Click HERE to choose Art Piece
                     </Button>
                   </Link>
                 </BannerWrapper>
