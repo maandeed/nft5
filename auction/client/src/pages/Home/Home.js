@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner/Banner";
 import InfoSection from "../../components/InfoSection/InfoSection";
-import { homeObjOne, homeObjTwo, homeObjThree } from './Data';
+import { homeObjOne, homeObjTwo } from './Data';
 
 const Home = () => {
     return ( 
@@ -8,7 +8,6 @@ const Home = () => {
             <Banner />
             <InfoSection {...homeObjOne} />
             <InfoSection {...homeObjTwo} />
-            <InfoSection {...homeObjThree} />
         </>
      );
 }
