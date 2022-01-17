@@ -35,7 +35,6 @@ const AuctionCard = (props) => {
               numberbid: props.numberbid,
               status: props.status,
               transactionhash: props.transactionhash,
-              bcid: props.bcid,
               account: account
             },
         })
@@ -63,7 +62,7 @@ const AuctionCard = (props) => {
               <Button
                 id={props.id}
                 disabled={true} >
-                Auction Started
+                Game Started
               </Button>
             )
         } else {      // not registered yet, only seller can register
@@ -72,7 +71,7 @@ const AuctionCard = (props) => {
                 id={props.id}
                 disabled={props.seller === account ? false : true}
                 onClick={(e) => { props.startAuction(e.target.id) }}>
-                Start Auction
+                Start Game
               </Button>
             )
         }
@@ -85,7 +84,7 @@ const AuctionCard = (props) => {
                 id={props.id}
                 disabled={false}
                 onClick={(e) => { getAuction(e.target.id) }}>
-                LIVE Auction
+                LIVE Game
               </Button>
             )
         } else if (props.status === -1 || props.status === 2) {
@@ -94,7 +93,7 @@ const AuctionCard = (props) => {
                 id={props.id}
                 disabled={false}
                 onClick={(e) => { getAuction(e.target.id) }}>
-                Auction Closed
+                Game Ended
               </Button>
             )
         } else {
@@ -103,7 +102,7 @@ const AuctionCard = (props) => {
                 id={props.id}
                 disabled={false}
                 onClick={(e) => { getAuction(e.target.id) }}>
-                Auction Detail
+                Game status
               </Button>
             )
         }
