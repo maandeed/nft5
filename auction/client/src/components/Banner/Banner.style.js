@@ -32,7 +32,7 @@ export const BannerWrapper = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: 960px) {
-    margin: 0 30px;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,16 +40,16 @@ export const BannerWrapper = styled.div`
 `;
 
 export const BannerHeading = styled.h1`
-  color: #fff;
+  color: #ffff;
   font-size: 60px;
-  margin-bottom: 24px;
+  margin-bottom: 35px;
 `;
 
 export const BannerPara = styled.p`
-  margin-top: 8px;
-  margin-bottom: 24px;
+  margin-top: 15x;
+  margin-bottom: 200px;
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 `;
