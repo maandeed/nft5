@@ -4,9 +4,9 @@ import { DataGrid } from "@material-ui/data-grid";
 import axios from "axios";
 
 const columns = [
-    { field: "bidder", headerName: "Bidder", width: 330 },
-    { field: "bidamount", headerName: "Bid Amount", type: "number", width: 130 },
-    { field: "bidtime", headerName: "Bid Time", type: "date", width: 190 },
+    { field: "player", headerName: "Player", width: 330 },
+    { field: "bidamount", headerName: "Registration Fee", type: "number", width: 130 },
+    { field: "gametime", headerName: "Game Time", type: "date", width: 190 },
     { field: "refunded", headerName: "Refunded", width: 10 },
     { field: "transactionhash", headerName: "Transaction Hash", width: 330,
       sortable: false,
@@ -24,7 +24,7 @@ const BidTable = (props) => {
     const { bids, setBids } = useContext(BidContext);
 
     useEffect(() => {
-//      console.log (`bidtable props = ${JSON.stringify(props)}`)
+//      console.log (`bidtable pros = ${JSON.stringify(props)}`)
       if (props.id) {
         axios
           .get(`/bids/findByAuction`, {
