@@ -25,7 +25,7 @@ const AuctionDetail = (props) => {
         if (props.status === 1) {
             return (
                 <Button big fontBig disabled={false} onClick={props.placeBid}>
-                    Submit Bid
+                    Play Game
                 </Button>
             )
         } else if (props.status === 2) {
@@ -37,13 +37,13 @@ const AuctionDetail = (props) => {
         } else if (props.status === -1) {
             return (
                 <Button big fontBig closed disabled={true} >
-                    Auction Closed
+                    Game Ended
                 </Button>
             )
         } else {
             return (
                 <Button big fontBig disabled={true} >
-                    Auction Not Started
+                    Game Not Started
                 </Button>
             )
         }
@@ -62,24 +62,24 @@ const AuctionDetail = (props) => {
                                 <TopLine lightTopLine>{props.balance}</TopLine>
                                 <br /><br /><br /><br />
                                 <Subtitle lightTextDesc={false}>
-                                    Auction Time: {props.starttime ? props.starttime.toLocaleString("en") : ""}
+                                    Game Time: {props.starttime ? props.starttime.toLocaleString("en") : ""}
                                     <br />
                                     Duration: {props.duration} min
                                 </Subtitle>
                                 <br /><br />
                                 <TopLine lightTopLine>
-                                    Starting Bid: {props.startbid} SMT
+                                    registration fee: {props.startbid} SMT
                                     <br /><br />
-                                    Current Bid: {props.currentbid} SMT
+                                    No of Players joined: {props.currentbid} players
                                 </TopLine>
                             </TextWrapper>
                             <BidInputRow>
                                 <BidInputColumn>
                                     <TextField
                                         id="bidInput"
-                                        label="Bid"
-                                        defaultValue="0"
-                                        helperText="Enter bid in SMT"
+                                        label="Name"
+                                        defaultValue="###"
+                                        helperText="Enter Name"
                                         variant="outlined"
                                         onChange={(e) => { props.updateBidInput(e.target.value) }} />
                                 </BidInputColumn>
