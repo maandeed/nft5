@@ -66,7 +66,7 @@ const AddAuctionForm = (props) => {
                     <Button Small fontBig
                         id="submitButton"
                         type="submit">
-                        Add Auction
+                        Add Painting
                     </Button>
                 </form>
             </InputContainer>
