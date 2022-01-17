@@ -1,0 +1,378 @@
+[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_bcAuctionId",
+				"type": "uint256"
+			}
+		],
+		"name": "getBids",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "bidAmount",
+						"type": "uint256"
+					},
+					{
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
+						"name": "refunded",
+						"type": "bool"
+					},
+					{
+						"name": "refundTxHash",
+						"type": "string"
+					},
+					{
+						"name": "transactionHash",
+						"type": "string"
+					}
+				],
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "auctions",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"name": "seller",
+				"type": "address"
+			},
+			{
+				"name": "imgFile",
+				"type": "string"
+			},
+			{
+				"name": "timestamp",
+				"type": "uint256"
+			},
+			{
+				"name": "duration",
+				"type": "uint256"
+			},
+			{
+				"name": "startPrice",
+				"type": "uint256"
+			},
+			{
+				"name": "reservePrice",
+				"type": "uint256"
+			},
+			{
+				"name": "currentBid",
+				"type": "uint256"
+			},
+			{
+				"name": "numBid",
+				"type": "uint256"
+			},
+			{
+				"name": "status",
+				"type": "int8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_bcAuctionId",
+				"type": "uint256"
+			}
+		],
+		"name": "paySeller",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "contractName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "contractBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_bcAuctionId",
+				"type": "uint256"
+			}
+		],
+		"name": "placeBid",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"name": "_imgFile",
+				"type": "string"
+			},
+			{
+				"name": "_timestamp",
+				"type": "uint256"
+			},
+			{
+				"name": "_duration",
+				"type": "uint256"
+			},
+			{
+				"name": "_startPrice",
+				"type": "uint256"
+			},
+			{
+				"name": "_reservePrice",
+				"type": "uint256"
+			}
+		],
+		"name": "createAuction",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "bcid",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "seller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "imgFile",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "timstamp",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "duration",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "startPrice",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "reservePrice",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "auctionId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "bidId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "bidder",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "bidAmount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "timstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "BidPlaced",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "auctionId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "bidId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "bidder",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "refundAmount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "timstamp",
+				"type": "uint256"
+			}
+		],
+		"name": "BidRefunded",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "auctionId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "seller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "status",
+				"type": "int8"
+			},
+			{
+				"indexed": false,
+				"name": "winner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "releaseAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "PaySeller",
+		"type": "event"
+	}
+]
