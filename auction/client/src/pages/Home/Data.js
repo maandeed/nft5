@@ -10,15 +10,15 @@ export const homeObjOne = {
     lightTopLine: false,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Welcome!!',
+    topLine: 'Introduction to WinMe',
     headline:
-      'What is AuctionMe',
+      'What is WinMe',
     description:
-      "AuctionMe is the premier online auction connecting artists and collectors through Blockchain technology to easily sell, invest and own art and collectibles with complete transparency.",
+      "WinMe is a play-to-win NFT DApp that aims to provides a platform for anyone to participate in playing simple games and contributing towards a social cause, with the opportunity to win art pieces (NFTs) and monetary rewards.",
     linkTo: '/how-it-work',
     buttonLabel: 'How It Works',
     imgStart: 'start',
-    img: require('../../images/svg-1.svg').default,
+    img: require('../../images/santi-vedri-O5EMzfdxedg-unsplash.jpg').default,
     alt: 'Vault',
     start: 'true'
   };
@@ -29,7 +29,26 @@ export const homeObjTwo = {
     lightTopLine: false,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Let`s Code!!',
+    topLine: 'For Creators',
+    headline:
+      'What is ReactJS',
+    description:
+      "ReactJS is cool!!",
+    linkTo: '/how-it-work',
+    buttonLabel: 'Add your Artwork!',
+    imgStart: 'start',
+    img: require('../../images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg').default,
+    alt: 'Vault',
+    start: 'true'
+  };
+
+  export const homeObjThree = {
+    primary: false,
+    lightBg: true,
+    lightTopLine: false,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'For Collectors',
     headline:
       'What is ReactJS',
     description:
