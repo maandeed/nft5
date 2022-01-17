@@ -67,7 +67,7 @@ const Navbar = () => {
             <NavbarContainer>
               <NavLogo to='/' onClick={closeMobileMenu}>
                 <NavIcon />
-                AuctionMe
+                WINme
               </NavLogo>
               <NavText>
               {account ? account
@@ -84,18 +84,18 @@ const Navbar = () => {
                 </NavItem>
                 <NavItem>
                   <NavLinks to='/addauction' onClick={closeMobileMenu}>
-                    Add Auction
+                    Add PAINTING
                   </NavLinks>
                 </NavItem>
                 <NavItemBtn>
                   {button ? (
                     <NavBtnLink to='/auctions'>
-                      <Button primary>GO TO AUCTION</Button>
+                      <Button primary>SELECT PAINTING</Button>
                     </NavBtnLink>
                   ) : (
                     <NavBtnLink to='/auctions'>
                       <Button onClick={closeMobileMenu} fontBig primary>
-                        GO TO ACTION
+                        SELECT PAINTING
                       </Button>
                     </NavBtnLink>
                   )}
