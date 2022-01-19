@@ -1,6 +1,7 @@
 import TextField from '@material-ui/core/TextField'
 import { Container, Button } from '../../globalStyles'
 import BidTable from '../../components/BidTable/BidTable'
+import Game from '../Game/Game'
 import {
     DetailSection,
     DetailRow,
@@ -25,7 +26,7 @@ const AuctionDetail = (props) => {
         if (props.status === 1) {
             return (
                 <Button big fontBig disabled={false} onClick={props.placeBid}>
-                    Play Game
+                    Submit Bid
                 </Button>
             )
         } else if (props.status === 2) {
@@ -37,13 +38,13 @@ const AuctionDetail = (props) => {
         } else if (props.status === -1) {
             return (
                 <Button big fontBig closed disabled={true} >
-                    Game Ended
+                    Auction Closed
                 </Button>
             )
         } else {
             return (
                 <Button big fontBig disabled={true} >
-                    Game Not Started
+                    Auction Not Started
                 </Button>
             )
         }
@@ -62,24 +63,24 @@ const AuctionDetail = (props) => {
                                 <TopLine lightTopLine>{props.balance}</TopLine>
                                 <br /><br /><br /><br />
                                 <Subtitle lightTextDesc={false}>
-                                    Game Time: {props.starttime ? props.starttime.toLocaleString("en") : ""}
+                                    Auction Time: {props.starttime ? props.starttime.toLocaleString("en") : ""}
                                     <br />
                                     Duration: {props.duration} min
                                 </Subtitle>
                                 <br /><br />
                                 <TopLine lightTopLine>
-                                    registration fee: {props.startbid} SMT
+                                    Starting Bid: {props.startbid} SMT
                                     <br /><br />
-                                    No of Players joined: {props.currentbid} players
+                                    Current Bid: {props.currentbid} SMT
                                 </TopLine>
                             </TextWrapper>
                             <BidInputRow>
                                 <BidInputColumn>
                                     <TextField
                                         id="bidInput"
-                                        label="Name"
-                                        defaultValue="###"
-                                        helperText="Enter Name"
+                                        label="Bid"
+                                        defaultValue="0"
+                                        helperText="Enter bid in SMT"
                                         variant="outlined"
                                         onChange={(e) => { props.updateBidInput(e.target.value) }} />
                                 </BidInputColumn>
@@ -106,6 +107,10 @@ const AuctionDetail = (props) => {
                             <BidTable id={props._id} />
                         </DetailSingleColumn>
                     </DetailRow>
+
+                    <div style={{display: 'flex', justifyContent:'center', alignItems:'center', padding:'5vh'}}>
+                        <Game numOfPlayers={props.numberbid} />
+                    </div>
                 </Container>
             </DetailSection>
         </>
