@@ -172,6 +172,7 @@ const Auction = () => {
                 status={auction.status}
                 winner={auction.winner}
                 bidInput={bidInput}
+                numberbid={auction.numberbid}
                 updateBidInput={updateBidInput}
                 placeBid={placeBid}
             />
