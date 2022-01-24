@@ -52,7 +52,7 @@ export const homeObjTwo = {
     headline:
       'Discover the best of WinMe',
     description:
-      "ReactJS is cool!!",
+      "Uncover your next NFT winfall while supporting our special education school student artists! Win mini-games to win our displayed artworks. Participants will be required to pay entry fees to play. Winners will be rewarded a small portion of the entry fee pot on top of the NFT artworks. ",
     linkTo: '/auctions',
     buttonLabel: 'Play a Game!',
     imgStart: 'start',
