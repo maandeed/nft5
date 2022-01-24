@@ -29,12 +29,12 @@ export const homeObjTwo = {
     lightTopLine: false,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'For Creators',
+    topLine: 'For our special artists',
     headline:
-      'What is ReactJS',
+      'Why WinMe',
     description:
-      "ReactJS is cool!!",
-    linkTo: '/how-it-work',
+      "WinMe aims to recognize the artistic talents of our young from special education schools.Artworks created by our young talents that can be digitized are uploaded onto our platform and interested parties from the public may acquire such NFTs by winning a mini-game to be played. To join the mini-games, participants pay a entry fee to play the mini-games. Majority of the collect entry fee is paid out to the artist, providing recognition to their talents.",
+    linkTo: '/addauction',
     buttonLabel: 'Add your Artwork!',
     imgStart: 'start',
     img: require('../../images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg').default,
@@ -50,13 +50,13 @@ export const homeObjTwo = {
     lightTextDesc: false,
     topLine: 'For Collectors',
     headline:
-      'What is ReactJS',
+      'Discover the best of WinMe',
     description:
       "ReactJS is cool!!",
-    linkTo: '/how-it-work',
-    buttonLabel: 'How It Works',
+    linkTo: '/auctions',
+    buttonLabel: 'Play a Game!',
     imgStart: 'start',
-    img: require('../../images/svg-2.svg').default,
+    img: require('../../images/roman-kraft-kRsd59yRNQ4-unsplash.jpg').default,
     alt: 'Vault',
     start: 'true'
   };
